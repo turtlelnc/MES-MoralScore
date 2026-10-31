@@ -1,0 +1,51 @@
+{
+  "name": "mes-moralscore",
+  "private": true,
+  "version": "0.1.0-rc1",
+  "type": "module",
+  "productName": "MES-MoralScore",
+  "description": "MES-MoralScore｜校园德育量化：面向中小学的数字化德育管理平台，支持多维加减分、实时记录、审核申诉、成长报告与数据分析。",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:server": "node --watch server/index.mjs",
+    "start": "node server/index.mjs",
+    "build": "tsc -b && vite build",
+    "lint": "node scripts/lint.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test --config tests/browser/playwright.config.mjs",
+    "seed": "node server/seed.mjs",
+    "seed:demo": "node server/seed.mjs --demo",
+    "admin:create": "node tools/create-admin.mjs",
+    "backup:run": "node --env-file-if-exists=.env tools/ops/backup.mjs run",
+    "backup:status": "node --env-file-if-exists=.env tools/ops/backup.mjs status"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^3.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -147,3 +147,16 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# MES-MoralScore runtime data
+data/
+backups/
+.tmp-smoke/
+.env
+.env.local
+.playwright/
+playwright-report/
+test-results/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
